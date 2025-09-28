@@ -1,23 +1,23 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "category": "fliegen",
-    "title": "Mein erster Flug",
-    "excerpt": "Ein cooles Erlebnis über den Wolken.",
-    "content": "Hier kommt der Text meines ersten Beitrags.",
-    "images": ["/images/flug1.jpg"],
-    "poll": {
-      "question": "War es ein tolles Erlebnis?",
-      "options": ["Ja", "Nein"]
-    }
+    "title": "Erster Flug nach BER",
+    "content": "Ein cooler Flug von CGN nach BER ✈️",
+    "image": "/images/flug1.jpg"
   },
   {
-    "id": "2",
+    "id": 2,
+    "category": "real",
+    "title": "Real Life Moment",
+    "content": "Heute mal Fahrrad statt Flugzeug 🚴",
+    "image": "/images/real1.jpg"
+  },
+  {
+    "id": 3,
     "category": "gaming",
-    "title": "Neues Game entdeckt",
-    "excerpt": "Ich habe ein geiles Spiel gefunden.",
-    "content": "Hier schreibe ich über das neue Spiel.",
-    "images": ["/images/game1.jpg"],
-    "poll": null
+    "title": "GeoFS Gaming",
+    "content": "Simulator-Flug mit Freunden 🎮",
+    "image": "/images/game1.jpg"
   }
 ]
