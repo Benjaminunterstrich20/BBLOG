@@ -71,7 +71,7 @@ article p {
 .like-btn {
     background-color: #ffff00;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -92,18 +92,38 @@ footer {
 }
 
 /* ====== RESPONSIVE ====== */
+/* Tablets */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
     }
+
+    header, footer {
+        padding: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
 }
 
+/* Smartphones */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
     }
 
-    header, footer {
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    article {
         padding: 15px;
     }
 }
