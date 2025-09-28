@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #121212;
-  color: white;
+  @apply bg-benniBlack text-white;
+}
+a {
+  @apply text-benniYellow underline;
 }
