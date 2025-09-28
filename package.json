@@ -13,8 +13,5 @@
     "react-dom": "latest",
     "tailwindcss": "latest",
     "shadcn-ui": "latest"
-    "engines": {
-  "node": "18.x"
-    }
+  }
 }
-
