@@ -8,13 +8,13 @@ body {
 }
 
 a {
-    color: #ffff00; /* Neon-Gelb */
+    color: #ffff00; /* Neon Gelb */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ffd700; /* etwas dunkleres Gelb */
+    color: #ffd700;
 }
 
 /* ====== HEADER ====== */
@@ -31,6 +31,11 @@ header h1 {
     color: #ffff00;
 }
 
+nav a {
+    margin: 0 15px;
+    font-weight: bold;
+}
+
 /* ====== MAIN CONTENT ====== */
 main {
     padding: 20px;
@@ -38,30 +43,44 @@ main {
     margin: auto;
 }
 
-.articles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.article {
+article {
     background: #111;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.3); /* Neon Gelb */
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+    margin-bottom: 20px;
 }
 
-.article:hover {
-    transform: translateY(-5px);
-}
-
-.article h2 {
+article h3 {
     color: #ffff00;
 }
 
-.article p {
+article p {
     line-height: 1.6;
+}
+
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.3);
+    margin: 10px 0;
+}
+
+/* ====== LIKE BUTTON ====== */
+.like-btn {
+    background-color: #ffff00;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.like-btn:hover {
+    transform: scale(1.1);
 }
 
 /* ====== FOOTER ====== */
