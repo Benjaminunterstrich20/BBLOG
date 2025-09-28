@@ -1,35 +1,18 @@
-import { useRouter } from 'next/router';
-import posts from '../../data/posts.json';
+import { useRouter } from "next/router";
+import posts from "../../data/posts.json";
 
 export default function PostPage() {
   const router = useRouter();
   const { id } = router.query;
-  const post = posts.find(p => p.id === id);
+  const post = posts.find(p => p.id.toString() === id);
 
-  if (!post) return <p className="p-5 text-white">Beitrag nicht gefunden</p>;
+  if (!post) return <p>Post not found</p>;
 
   return (
-    <div className="bg-benniBlack min-h-screen text-white p-5">
-      <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
-      <div>{post.content}</div>
-      {post.images && (
-        <div className="grid grid-cols-2 gap-4 mt-4">
-          {post.images.map((img, idx) => (
-            <img key={idx} src={img} alt={`Bild ${idx}`} className="rounded" />
-          ))}
-        </div>
-      )}
-      {post.poll && (
-        <div className="mt-6">
-          <h3 className="font-bold">{post.poll.question}</h3>
-          {post.poll.options.map(option => (
-            <div key={option} className="flex items-center mt-2">
-              <input type="radio" name="poll" className="mr-2" />
-              <span>{option}</span>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
+    <main className="p-8">
+      <h1 className="text-2xl text-benniYellow">{post.title}</h1>
+      <p className="mt-4">{post.content}</p>
+      {post.image && <img src={post.image} alt={post.title} className="mt-4 rounded-lg" />}
+    </main>
   );
 }
