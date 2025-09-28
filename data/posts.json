@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "category": "fliegen",
+    "title": "Mein erster Flug",
+    "excerpt": "Ein cooles Erlebnis über den Wolken.",
+    "content": "Hier kommt der Text meines ersten Beitrags.",
+    "images": ["/images/flug1.jpg"],
+    "poll": {
+      "question": "War es ein tolles Erlebnis?",
+      "options": ["Ja", "Nein"]
+    }
+  },
+  {
+    "id": "2",
+    "category": "gaming",
+    "title": "Neues Game entdeckt",
+    "excerpt": "Ich habe ein geiles Spiel gefunden.",
+    "content": "Hier schreibe ich über das neue Spiel.",
+    "images": ["/images/game1.jpg"],
+    "poll": null
+  }
+]
