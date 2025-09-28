@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benni Blog</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <h1>Willkommen bei Benni Blog</h1>
+    <h1>Benni Blog</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="impressum.html">Impressum</a>
@@ -16,16 +17,31 @@
 <main>
     <section id="home">
         <h2>Startseite</h2>
-        <p>Hier findest du die neuesten Inhalte und Infos Von Benni Blog.</p>
+        <p>Willkommen auf meinem Blog! Hier findest du alle Beiträge zu Fliegen, Gaming und Real Life.</p>
     </section>
 
     <section id="blog">
         <h2>Blog</h2>
 
         <article>
-            <h3>Moin</h3>
-            
-            <p>Ich bin Benni und ab jetzt Teile ich Bilder Texte etc aus meinem leben!</p>
+            <h3>Fliegen</h3>
+            <img src="images/fliegen.jpg" alt="Flugzeug am Himmel" class="blog-image">
+            <p>Mein erster Flug war mega krass. Der Ausblick über die Wolken war surreal.</p>
+            <button class="like-btn" data-id="flug1">👍 Like (<span class="like-count">0</span>)</button>
+        </article>
+
+        <article>
+            <h3>Real Life</h3>
+            <img src="images/reallife.jpg" alt="Alltag" class="blog-image">
+            <p>Manchmal muss man einfach das Leben genießen und alles locker nehmen.</p>
+            <button class="like-btn" data-id="rl1">👍 Like (<span class="like-count">0</span>)</button>
+        </article>
+
+        <article>
+            <h3>Gaming</h3>
+            <img src="images/gaming.jpg" alt="Gaming Setup" class="blog-image">
+            <p>Ich liebe Gaming! Neue Games testen macht einfach mega Spaß.</p>
+            <button class="like-btn" data-id="game1">👍 Like (<span class="like-count">0</span>)</button>
         </article>
     </section>
 </main>
@@ -33,5 +49,22 @@
 <footer>
     <p>Benni Blog © 2025</p>
 </footer>
+
+<script>
+document.querySelectorAll('.like-btn').forEach(button => {
+    const id = button.dataset.id;
+    const countSpan = button.querySelector('.like-count');
+
+    let likes = localStorage.getItem(id) || 0;
+    countSpan.textContent = likes;
+
+    button.addEventListener('click', () => {
+        likes++;
+        localStorage.setItem(id, likes);
+        countSpan.textContent = likes;
+    });
+});
+</script>
+
 </body>
 </html>
